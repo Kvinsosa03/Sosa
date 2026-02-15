@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> <!-- Codificacion -->
+        <meta name="viewport" content="width=device-width"> <!-- Ajustar tamano -->
+        <title>wara-media.com/contacto</title>
+        <meta name="description" content="Contactos generales de Wara-Media">
+
+        <meta name="robots" content="index, follow">
+        <link rel="icon" type="image/jpg" href="/Programacion Web/wara.jpg">
+
+        <style>
+            .icono{
+                display: flex;
+                align-items: center;
+                margin: 10px 10px;
+                
+
+            }
+            .link{
+                border-style: solid;
+                border-radius: 10px;
+                text-align: left;
+                padding: 15px;
+                
+            }
+            a{
+                color: rgb(216, 213, 213);
+                text-decoration: none;
+            }
+            .parrafo{
+                color: rgb(216, 213, 213);
+                opacity: 60%;
+            }
+            .fondo{
+                background-color: rgb(22, 22, 22);
+                 color: rgb(163, 160, 160);
+            }
+            .fondo-button{
+                background-color: rgb(255, 0, 0);
+                 color: antiquewhite;
+            }
+            .uno{
+                opacity: 60%;
+                font-size: 12px;
+            } 
+            body{
+                background: rgb(0, 0, 0);
+                color: rgb(216, 213, 213);
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            footer{
+                text-align: center;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header> 
+            <h1>Contacto General</h1>
+        </header>
+        <main>
+            <p class="parrafo">¿Tienes una pregunta sobre casting, prensa o cualquier tema general?<br>Rellena el formulario</p>
+
+            <section>
+                <div class="icono">
+                    <img src="mensaje.jpg" width="30" height="30">
+                    <a href="mailto:info@waramedia.com"><strong>EMAIL</strong><br>info@waramedia.com<br><span class="uno">RESPUESTA EN 24h</span></a>
+                </div>
+                <br>
+                <div class="icono">
+                    <img src="tel.jpg" width="30" height="30">
+                    <a href="tel: +5351757553"><strong>LLÁMANOS</strong><br>+53 5175 7553<br><span class="uno">LUN-VIE, 9am-6pm</span></a>
+                </div>
+                <br>
+                <div class="icono">
+                    <img src="ubi.jpg" width="30" height="30">
+                    <p><strong>STUDIO</strong><br>La Habana,Cuba<br><span class="uno">DISPONIBLES PARA VIAJES</span></p>
+                </div>
+                
+            </section>
+
+            <section class="link">
+                <p><strong>¿BUSCAS PATROCINIO?</strong></p>
+                <p>¿Interesado en Patrocinio o Colaboracion de Marca?</p>
+                <a  href="https://wuara-media.com/sponsorship">Ir a la pagina de Patrocinio -></a>
+                <br>
+            </section>
+
+            <br>
+            <section>
+                <form  method="post" action="/">
+                    <fieldset>
+                        <h2>ENVÍANOS UN MENSAJE</h2>
+                        <div>
+                            <input class="fondo"
+                                type="text" 
+                                id="name"   
+                                name="name" 
+                                placeholder="Nombre Completo"
+                                required
+                        
+                            >
+                        </div>
+
+                        <br>
+                        <div>
+                            <input class="fondo"
+                                type="email" 
+                                id="email"   
+                                name="email" 
+                                placeholder="Email"
+                                required
+                            >
+                        </div>
+
+                        <br>
+                        <div>
+                            <select class="fondo" name="why" id="why">
+                                <option value="1">Asunto</option>
+                                <option value="2">Participar en Casting</option>
+                                <option value="3">Prensa</option>
+                                <option value="4">Otro</option>
+                            </select>
+                        </div>
+
+                        <br>
+                        <div>
+                            <input class="fondo"
+                                type="text" 
+                                id="mensaje"   
+                                name="mensaje" 
+                                placeholder="Mensaje"
+                                required
+                                >
+                        </div>
+       
+                        <br>
+                        <button class="fondo-button">ENVIAR MENSAJE</button>
+
+                    </fieldset>
+
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <br>
+            <img src="wara.jpg" width="30" height="30">
+           <p>Historias que desafian la norma. Producido en Cuba para el mundo.</p>
+           <div>
+                <a href="https://www.instagram.com/waramedia_?igsh=MXQ1NTRhN2Q3NjkwOQ=="><img src="inst.jpg" width="30" height="30"></a>
+                <a href="https://youtube.com/@wuaramedia?si=a_02t_SMrxACjFOw"><img src="yuot.jpg" width="30" height="30"></a>
+                <a href="https://www.facebook.com/share/1FM6H5oqWE/"><img src="face.jpg" width="30" height="30"></a>
+           </div>
+            @ 2026 Wuara Media. Todos los derechos reservados.
+        </footer>
+    </body>
+</html>
+
