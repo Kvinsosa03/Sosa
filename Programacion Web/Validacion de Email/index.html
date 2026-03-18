@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width"> 
-        <title>Palíndromo</title>
-         <style>
+        <title>Validacion de Email</title>
+        <style>
              body{
                 background: rgb(241, 211, 129);
                 color: rgb(8, 8, 8);
@@ -34,14 +34,16 @@
                 border-style: solid;
              }
         </style>
-
     </head>
     <body>
-        <h1>Palíndromo</h1>
-        <input class="Pantalla" id="text" type="text" placeholder="Escribe una palabra">
-        <button class="Button" id="Button1">Comprobar</button>
+        <h1>Validacion de Email</h1>
+        <div>
+        <input class="Pantalla" type="email" id="email" name="email" placeholder="Email" required>
+        </div><br>
+        <button class="Button" id="Button1" type="submit" title="Comprobacion">Combrobar</button>
         <br><br>
-        <div class="Pantalla" id="mensaje">...</div>
-        <script src="Palindromo.js"></script>
+        <div  class="Pantalla" id="mensaje">...</div>
+        <ul id="list"></ul>
+        <script src="ValidacionEmail.js"></script>
     </body>
 </html>
