@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width"> 
-        <title>Validacion de Email</title>
+        <title>Buscador de GitHub</title>
         <style>
              body{
                 background: rgb(241, 211, 129);
@@ -36,14 +36,12 @@
         </style>
     </head>
     <body>
-        <h1>Validacion de Email</h1>
-        <div>
-        <input class="Pantalla" type="email" id="email" name="email" placeholder="Email" required>
-        </div><br>
-        <button class="Button" id="Button1" type="submit" title="Comprobacion">Combrobar</button>
+        <h1>Buscar perfil de GitHub</h1>
+       
+        <input class="Pantalla" type="text" id="username" placeholder="Introduce un Usuario" required>
+        <button class="Button" id="Button1">Buscar</button>
         <br><br>
-        <div  class="Pantalla" id="mensaje">...</div>
-        <ul id="list"></ul>
-        <script src="ValidacionEmail.js"></script>
+        <div id="resultado">...</div>
+        <script src="BusquedaPerfiles.js"></script>
     </body>
 </html>
