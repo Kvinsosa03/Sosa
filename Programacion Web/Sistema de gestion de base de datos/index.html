@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Gestión de empleados</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body{
+        background: rgb(241, 211, 129);
+        color: rgb(8, 8, 8);
+        font-family:'Courier New', Courier, monospace;
+        text-align: center;
+    }
+    table {
+        border-collapse: collapse; 
+        width: 100%; 
+        margin-top: 20px; 
+    }
+    .Button1:hover{
+        color: red;
+    }
+    .Button1:active{
+        color: blue;
+    }
+    th, td { 
+        border: 1px solid #ccc; 
+        padding: 8px; 
+        text-align: left; 
+    }
+    th { 
+        background: #f0f0f0; 
+    }
+    tr:hover { 
+        background-color: #e6f7ff; 
+    }
+
+    img { 
+        width: 50px; 
+        height: 50px; 
+        border-radius: 50%; 
+    }
+    button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    button.eliminar { 
+        background: #f44336; 
+        color: white; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Base de datos de empleados</h1>
+
+  <!-- Formulario -->
+  <form id="formEmpleado">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="apellido" placeholder="Apellido" required>
+    <input type="email" id="email" placeholder="Correo electrónico" required>
+    <input type="tel" id="telefono" placeholder="Teléfono" required>
+    <input type="number" id="salario" placeholder="Salario" required>
+    <input title="fechaNacimiento" type="date" id="fechaNacimiento" required>
+    <input type="url" id="imagen" placeholder="URL de imagen (opcional)"><br><br>
+    <button class="Button1" type="submit">Añadir empleado</button>
+  </form>
+
+  <!-- Tabla -->
+  <table id="tablaEmpleados">
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Salario</th>
+        <th>Fecha de nacimiento</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="SistemaGestionDatos.js"></script>
+</body>
+</html>
