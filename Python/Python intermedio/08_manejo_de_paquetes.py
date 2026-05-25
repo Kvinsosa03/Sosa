@@ -1,9 +1,0 @@
-# Manejo de paquetes
-
-
-
-
-
-
-
-
