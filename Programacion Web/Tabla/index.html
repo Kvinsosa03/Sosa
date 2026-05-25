@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width"> 
+  <title>Tabla interactiva</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body{
+      background: rgb(241, 211, 129);
+      color: rgb(8, 8, 8);
+      font-family:'Courier New', Courier, monospace
+    }
+    table { 
+      border-collapse: collapse; 
+      width: 100%; 
+      margin-top: 20px; }
+    th, td { 
+      border: 1px solid #ccc; padding: 8px; text-align: left; 
+    }
+    th { cursor: pointer; 
+      background: rgb(245, 237, 217); 
+    }
+    tr:hover { 
+      background: rgb(245, 237, 217);
+    }
+    .Button1:hover{
+      color: red;
+    }
+    .Button1:active{
+      color: blue;
+    }
+    .acciones button {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .acciones button:first-child { 
+      background: #4CAF50; 
+      color: white; }
+    .acciones button:last-child { 
+      background: #f44336; 
+      color: white; }
+  </style>
+</head>
+<body>
+  <h1>Gestión de elementos</h1>
+
+  <form id="formulario">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="categoria" placeholder="Categoría" required>
+    <input type="number" id="anio" placeholder="Año de lanzamiento" required>
+    <button class="Button1" type="submit">Añadir / Guardar</button>
+  </form>
+
+  <input type="text" id="filtro" placeholder="Filtrar por nombre...">
+
+  <table id="tabla">
+    <thead>
+      <tr>
+        <th data-campo="nombre">Nombre</th>
+        <th data-campo="categoria">Categoría</th>
+        <th data-campo="anio">Año</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="Tabla.js"></script>
+</body>
+</html
