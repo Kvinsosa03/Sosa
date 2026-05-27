@@ -1,6 +1,6 @@
 
 from fastapi import FastAPI
-from Routers import users,restaurant,autentificacion
+from Routers import users,restaurant,autentificacion,cliente_acciones
 
 
 app = FastAPI()
@@ -10,6 +10,8 @@ app = FastAPI()
 app.include_router(users.router)
 app.include_router(restaurant.router)
 app.include_router(autentificacion.router)
+app.include_router(cliente_acciones.router)
+
 
 @app.get("/")
 async def root():
