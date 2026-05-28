@@ -39,7 +39,7 @@ def buscar_usuario_BD(usuario: str, db=Depends(conexion)):
     return result
 
 
-# Endpoint de login
+# Endpoint de login de usuario
 @router.post("/login")
 async def login(form: OAuth2PasswordRequestForm = Depends(), db=Depends(conexion)):
     user = buscar_usuario_BD(form.username, db)
@@ -52,6 +52,7 @@ async def login(form: OAuth2PasswordRequestForm = Depends(), db=Depends(conexion
     access_token = crear_access_token(data = {"sub": user["usuario"]})
     return {"access_token": access_token, "token_type": "bearer"}
 
+# Endpoint de login de admin
 @router.post("/login_admin")
 async def login_admin(form: OAuth2PasswordRequestForm = Depends(), db=Depends(conexion)):
     user = buscar_usuario_BD(form.username, db)
