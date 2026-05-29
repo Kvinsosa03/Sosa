@@ -1,2 +1,1 @@
-    # cursor.close()
-    # connection.close()
+uvicorn conn:app --reload

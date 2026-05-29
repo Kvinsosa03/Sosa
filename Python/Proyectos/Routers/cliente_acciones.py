@@ -1,50 +1,10 @@
-from fastapi import APIRouter, Depends, HTTPException, status
-from pydantic import BaseModel
-from typing import Optional
-from datetime import date, time
+from fastapi import APIRouter, Depends, HTTPException
+from Auxiliar.funciones import current_user, verificar_password, encriptar_password
+from Auxiliar.modelos import User, UserUpdate, Reserva
+from datetime import date
 from DB.DB import conexion
-from Routers.autentificacion import buscar_usuario_BD, encriptar_password, verificar_password, OAuth2
 
 router = APIRouter()
-
-# Modelos de usuario
-class User(BaseModel):
-    usuario: str
-    nombre: str
-    apellido: str
-    email: str
-    contrasena: str
-
-class UserUpdate(BaseModel):
-    usuario: str
-    nombre: str
-    apellido: str
-    email: str
-    contrasena_actual: str
-    contrasena_nueva: str
-    
-# Modelo de reserva
-class Reserva(BaseModel):
-    id_restaurant: int
-    nombre: str
-    fecha: date
-    horario: time
-    comensales: int
-    alergias: Optional[str] = None
-    
-# Dependencia: usuario actual
-async def current_user(token: str = Depends(OAuth2), db=Depends(conexion)):
-    user = buscar_usuario_BD(token, db)
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Credenciales inválidas")
-    if user["disable"]:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Usuario inactivo")
-    return user
-
 
 # Endpoint para obtener datos completos del usuario autenticado
 @router.get("/user/me")
